@@ -21,6 +21,15 @@ function Character(name, profession, gender, age, strength, hp) {
     this.age++;
     this.strength +=5;
     this.hp +=25;
+  };
+  
+  this.skill = () ->{
+    if(profession == druid){
+      this.strenght= +=2;
+    }
+    
+    else if(profession == barbarian){
+    this.strenght= +=6;
   }
 }
 
@@ -36,9 +45,9 @@ let chris = new Character("Christopher", "Film", "Male", 30, 120, 80);
 bigTony.mount = "Suburban";
 printStats(bigTony);
 
-var arr = [bigTony, uncleJunior, artie, chris];
+const arr = [bigTony, uncleJunior, artie, chris];
 
-for(var i=0; i<arr.length; i++){
+for(const i=0; i<arr.length; i++){
     console.log(arr[i]);
     var e = document.createElement('div');
     e.innerHTML = "<div class='character-box'><h1><i class='fas fa-walking'></i><span style='margin-left:10px;'>" + arr[i].name + "</span><h1>"
